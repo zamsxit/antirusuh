@@ -75,7 +75,7 @@ class IndexController extends Controller
         // 🔒 Anti akses update settings selain user ID 1
         $user = Auth::user();
         if (!$user || $user->id !== 1) {
-            abort(403, 'BOCAH TOLOL NGINTIP NGINTIP ');
+            abort(403, 'Akses Ditolak ');
         }
 
         foreach ($request->normalize() as $key => $value) {
